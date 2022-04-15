@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    font-family: Roboto, Monospace;
+}
+.wrapper {
+    width: 336px;
+    max-height: 236px;
+    border-radius: 10px;
+    border: 1px;
+    border-color: #C4C4C4;
+    box-shadow: #00000040;
+    border-style: solid;
+    
+}
+.upper-part {
+    background-color: #FFDC40;
+    padding-top: 8px;
+    border-radius: 10px 10px 0px 0px;
+    width: 336px;
+    height: 20px;
+}
+.main-text {
+    font-size: 26px;
+    font-weight: 900;
+    text-align: center;
+}
+
+ .form {
+     padding-left: 24px;
+ }
+ .form-to-do-list {
+    border:  1px solid #C4C4C4;
+    border-radius: 10px;
+    height: 40px;
+    width: 286px;
+    box-sizing: border-box;
+    margin-top: 10px;
+   
+ }
+ .button-container {
+    text-align: center;
+    padding-left: 95px;
+    /*max-height: 100%;*/
+ }
+ .button-round { 
+     background-color: #AA68FE;
+     border: none;
+     border-radius: 71px;
+     width: 42px;
+     max-height: 42px;
+     color: #FFFFFF;
+     font-weight: 400;
+     font-size: 14px;
+     position: relative;
+     bottom: 28px;
+     box-sizing: border-box;
+     padding: 13px;
+ }
+ .button-text {
+     background-color: #9953F1;
+     width: 150px;
+     max-height: 43px;
+     border-radius: 71px;
+     color: #FFFFFF;
+     font-weight: 400;
+     font-size: 14px;
+     position: relative;
+     top: 14px; 
+     box-sizing: border-box;
+     padding: 13px 13px 13px 30px;
+ }
+ .button-container:hover {
+     cursor: pointer;
+ }
+ img {
+     padding-left: 280px;
+     width: 25px;
+     height: 15px;
+ }
+ .delete-button {
+     position: relative;
+     bottom: 28px;
+     right: 32px;
+ }
+ /*.button-sort-list-one - стрелка сортировки вверх
+ .button-sort-list-two - стрелка сортировки вниз*/
