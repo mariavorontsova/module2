@@ -4,7 +4,7 @@ body {
 }
 .wrapper {
     width: 336px;
-    max-height: 236px;
+    max-height: 500px;
     border-radius: 10px;
     border: 1px;
     border-color: #C4C4C4;
@@ -77,10 +77,46 @@ body {
      width: 25px;
      height: 15px;
  }
- .delete-button {
-     position: relative;
-     bottom: 28px;
-     right: 32px;
- }
- /*.button-sort-list-one - стрелка сортировки вверх
- .button-sort-list-two - стрелка сортировки вниз*/
+
+ .text-list{
+    display: flex;
+    justify-content:space-between;
+    margin: 6px 0px 10px 10px;
+    font-weight: 400;
+}
+
+.list {
+    border:  1px solid #C4C4C4;
+    border-radius: 10px;
+    box-sizing: border-box;
+    max-height: 400px;
+    width: 286px;
+    margin-left: 24px;
+    margin-top: 10px;
+}
+
+.sort-button-list {
+    background-image: url(images/sort-img-down-gray.png);
+    width: 25px;
+    height: 15px;
+    margin-left: auto;
+    padding-right: 30px;
+}
+.sort-button-list:hover {
+    background-image: url(images/sort-img-down-black.png);
+    cursor: pointer;
+}
+.sort-button-list-two {
+    background-image: url(images/sort-img-up-gray.png);
+    width: 25px;
+    height: 15px;
+    margin-left: auto;
+    padding-right: 30px;
+}
+.sort-button-list-two:hover {
+    background-image: url(images/sort-img-up-black.png);
+    cursor: pointer;
+}
+.delete-button:hover {
+color:#9953F1;
+}

@@ -13,11 +13,16 @@
         <div class="upper-part"></div>
             <div class="container-to-do-list">
                 <h1 class="main-text">To-Do list</h1>
-                <div class="sort-button"><img src="images/sort-image.svg" alt="sort-image"></div>
+                <div type = "button" class="button-sort-img">
+                  <div class="sort-button-list"></div>
+                </div>
                     <form class="form">
-                    <input class="form-to-do-list" name="text-to-do-list" type="text" placeholder="Add to-do list">
+                    <input class="form-to-do-list" name="text-to-do-list" type="text" placeholder="Add task">
                     </form>
-                      <div class="list" style="display: block;"></div> <!--список, который выводится после инпута(купить хлеб, сходить в зал и тд)-->
+                      <div class="list" style="display: none;"> <!--список, который выводится после инпута(купить хлеб, сходить в зал и тд)-->
+                        <div class="text-list"></div>
+                        <div class="delete-button"></div>
+                      </div> 
                             <div class="button-container" type="button">
                             <div class="button-text">Добавить</div>
                             <div class="button-round">+</div>
