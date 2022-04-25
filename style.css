@@ -10,7 +10,6 @@ body {
     border-color: #C4C4C4;
     box-shadow: #00000040;
     border-style: solid;
-    
 }
 .upper-part {
     background-color: #FFDC40;
@@ -77,14 +76,12 @@ body {
      width: 25px;
      height: 15px;
  }
-
  .text-list{
     display: flex;
     justify-content:space-between;
-    margin: 6px 0px 10px 10px;
+    margin: 8px 0px 10px 10px;
     font-weight: 400;
 }
-
 .list {
     border:  1px solid #C4C4C4;
     border-radius: 10px;
@@ -94,13 +91,14 @@ body {
     margin-left: 24px;
     margin-top: 10px;
 }
-
+.button-sort-img {
+    padding-right: 30px;
+}
 .sort-button-list {
     background-image: url(images/sort-img-down-gray.png);
     width: 25px;
     height: 15px;
     margin-left: auto;
-    padding-right: 30px;
 }
 .sort-button-list:hover {
     background-image: url(images/sort-img-down-black.png);
@@ -111,12 +109,21 @@ body {
     width: 25px;
     height: 15px;
     margin-left: auto;
-    padding-right: 30px;
 }
 .sort-button-list-two:hover {
     background-image: url(images/sort-img-up-black.png);
     cursor: pointer;
 }
+.delete-button {
+    background-color: white;
+    color: #C4C4C4;
+    position: relative; 
+    border: 1px solid #C4C4C4;
+    cursor: pointer;
+    border-radius: 50%;
+    right: 9px;
+}
 .delete-button:hover {
-color:#9953F1;
+    background-color:#9953F1;
+    color: white;
 }
