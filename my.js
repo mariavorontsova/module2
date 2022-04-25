@@ -50,14 +50,9 @@ function addTask (newTaskName) { //обновление и стилизация 
 function createDeleteButton () {
     let deleteButton = document.createElement('button'); //создаем кнопку
     deleteButton.type = 'button'; //тип
-    deleteButton.innerText = 'X'; 
+    deleteButton.innerText = 'x'; 
     let deleteButtonClass = deleteButton.classList; 
     deleteButtonClass.add('delete-button');
-        // deleteButton.style.position = 'relative'; переместила в css
-        // deleteButton.style.border = '#C4C4C4';
-        // deleteButton.style.cursor = 'pointer';
-        // deleteButton.style.borderRadius = '50%';
-        // deleteButton.style.right = '16px';
     deleteButton.addEventListener('click', clickDeleteButton);
     return deleteButton //результат выполнения функции
     }
@@ -67,8 +62,9 @@ function clickDeleteButton () {  //удалить из div и удалить и�
     console.log(previousElementDiv);
     previousElementDiv.remove();
     let str = previousElementDiv.innerText;
-    console.log('str', str);
-    console.log('arrayToDo', arrayToDo);
+    str = str.split("x").join("");
+    //console.log('str', str);
+    //console.log('arrayToDo', arrayToDo);
     toDoList.style.display = 'block';
     let elementArr = arrayToDo.indexOf(str);
     arrayToDo.splice(elementArr, 1);
