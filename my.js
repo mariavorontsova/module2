@@ -37,38 +37,43 @@ if (inputToDo.value === '' || inputToDo.value === ' ') { //проверка на
 }}
 
 function addTask (newTaskName) { //обновление и стилизация блока, создание визуала
-let newElementDiv = document.createElement('div'); //создаем div пустой
-newElementDiv.innerText = newTaskName; //записывается переданная строка 
-toDoList.append(newElementDiv); //добавялем элемент в todolist
-let newDeleteButton = createDeleteButton(); //создаем новую переменную и присваиваем выполнение функции
-newElementDiv.classList.add('text-list');
-//добавить стилизацию
-createDeleteButton(newElementDiv);
-newElementDiv.append(newDeleteButton);
-}
+    let newElementDiv = document.createElement('div'); //создаем div пустой
+    newElementDiv.innerText = newTaskName; //записывается переданная строка 
+    toDoList.append(newElementDiv); //добавляем элемент в todolist
+    let newDeleteButton = createDeleteButton(); //создаем новую переменную и присваиваем выполнение функции
+    newElementDiv.classList.add('text-list');
+    //добавить стилизацию
+    createDeleteButton(newElementDiv);
+    newElementDiv.append(newDeleteButton);
+    }
     
 function createDeleteButton () {
-let deleteButton = document.createElement('button'); //создаем кнопку
-deleteButton.type = 'button'; //тип
-deleteButton.innerText = 'x'; 
-let deleteButtonClass = deleteButton.classList; 
-deleteButtonClass.add('delete-button'); //создали пустой div, стили перенесла в css
-deleteButton.addEventListener('click', clickDeleteButton);
-return deleteButton //результат выполнения функции
-}
+    let deleteButton = document.createElement('button'); //создаем кнопку
+    deleteButton.type = 'button'; //тип
+    deleteButton.innerText = 'X'; 
+    let deleteButtonClass = deleteButton.classList; 
+    deleteButtonClass.add('delete-button');
+        // deleteButton.style.position = 'relative'; переместила в css
+        // deleteButton.style.border = '#C4C4C4';
+        // deleteButton.style.cursor = 'pointer';
+        // deleteButton.style.borderRadius = '50%';
+        // deleteButton.style.right = '16px';
+    deleteButton.addEventListener('click', clickDeleteButton);
+    return deleteButton //результат выполнения функции
+    }
 
 function clickDeleteButton () {  //удалить из div и удалить из массива 
-let previousElementDiv = this.closest('.text-list');
-console.log(previousElementDiv);
-previousElementDiv.remove();
-let str = previousElementDiv.innerText;
-console.log('str', str);
-console.log('arrayToDo', arrayToDo);
-toDoList.style.display = 'block';
-let elementArr = arrayToDo.indexOf(str);
-arrayToDo.splice(elementArr, 1);
-console.log(arrayToDo);
-}
+    let previousElementDiv = this.closest('.text-list');
+    console.log(previousElementDiv);
+    previousElementDiv.remove();
+    let str = previousElementDiv.innerText;
+    console.log('str', str);
+    console.log('arrayToDo', arrayToDo);
+    toDoList.style.display = 'block';
+    let elementArr = arrayToDo.indexOf(str);
+    arrayToDo.splice(elementArr, 1);
+    console.log(arrayToDo);
+    }
 
 function clickSortButton () {
     if (toDoList.style.display == 'block') {
@@ -77,7 +82,7 @@ function clickSortButton () {
 //} 
   let formSort = document.querySelectorAll('.text-list'); //находим все элементы с классом text-list
   arrayToDo.sort(compareList);//сортировка массива в который пушим task
-  console.log(arrayToDo);
+  //console.log(arrayToDo);
   //console.log(formSort);
 
   formSort.forEach((element, i, arr) => {
@@ -88,7 +93,8 @@ function clickSortButton () {
       element.append(deleteButton);
   })
   buttonSort.classList = buttonSort.classList = 'sort-button-list' 
-  ? 'sort-button-list-two' : 'sort-button-list'
+  ? 'sort-button-list-two' 
+  : 'sort-button-list';
   //buttonSort.classList = buttonSort.classList == 'button-sort-list-one - стрелка сортировки вверх' ? 'button-sort-list-two 
   //- стрелка сортировки вниз' : 'button-sort-list-one - стрелка сортировки вверх'
 } else {
